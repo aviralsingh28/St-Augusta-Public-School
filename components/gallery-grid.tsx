@@ -2,68 +2,76 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
 
 const galleryImages = [
   {
     id: 1,
-    src: "/students-in-classroom.jpg",
-    alt: "Classroom Learning",
-    category: "Academic",
+    src: "/classrooms/WhatsApp Image 2026-05-11 at 11.58.49.jpeg",
+    alt: "Classroom 1",
+    category: "Classrooms",
   },
   {
     id: 2,
-    src: "/science-laboratory-experiments.jpg",
-    alt: "Science Lab",
-    category: "Labs",
+    src: "/classrooms/WhatsApp Image 2026-05-11 at 11.58.16.jpeg",
+    alt: "Classroom 2",
+    category: "Classrooms",
   },
   {
     id: 3,
-    src: "/school-sports-field-activities.jpg",
-    alt: "Sports Activities",
-    category: "Sports",
+     src: "/classrooms/WhatsApp Image 2026-05-11 at 11.56.34.jpeg",
+    alt: "Classroom 3",
+    category: "Classrooms",
   },
   {
     id: 4,
-    src: "/school-library-reading.jpg",
-    alt: "Library",
-    category: "Facilities",
+    src: "/classrooms/classroom4.png",
+    alt: "Classroom 4",
+    category: "Classrooms",
   },
   {
     id: 5,
-    src: "/students-cultural-program-performance.jpg",
-    alt: "Cultural Program",
-    category: "Events",
+    src: "/classrooms/a5deb5ab-4776-40f1-a0c3-a7009bd7f55e.png",
+    alt: "Classroom Space",
+    category: "Classrooms",
   },
   {
     id: 6,
-    src: "/school-assembly-students-gathering.jpg",
-    alt: "School Assembly",
-    category: "Events",
+    src: "/classrooms/b89aa4a9-abf4-469d-a206-4321f98367ef.jpg",
+    alt: "Classroom Setup",
+    category: "Classrooms",
   },
   {
     id: 7,
-    src: "/computer-lab-digital-learning.jpg",
-    alt: "Computer Lab",
-    category: "Labs",
+    src: "/classrooms/classroom3.png",
+    alt: "Classroom Activity 1",
+    category: "Classrooms",
   },
   {
     id: 8,
-    src: "/students-group-project-teamwork.jpg",
-    alt: "Group Projects",
-    category: "Academic",
+   src: "/classrooms/classroom2.png",
+    alt: "Classroom Activity 2",
+    category: "Classrooms",
   },
   {
     id: 9,
-    src: "/sports-tournament-competition.jpg",
-    alt: "Sports Tournament",
-    category: "Sports",
+    src: "/classrooms/classroom1.jpg",
+    alt: "Classroom Activity 3",
+    category: "Classrooms",
+  },
+    {
+    id: 10,
+    src: "/events/IMG_7998.jpg",
+    alt: "Rakhi Competition",
+    category: "Events",
   },
 ]
 
-const categories = ["All", "Academic", "Labs", "Sports", "Facilities", "Events"]
+const categories = ["All", "Classrooms", "Labs", "Sports", "Facilities", "Events"]
 
 export function GalleryGrid() {
   const [selectedCategory, setSelectedCategory] = useState("All")
+  const [selectedImage, setSelectedImage] = useState<typeof galleryImages[0] | null>(null)
 
   const filteredImages =
     selectedCategory === "All" ? galleryImages : galleryImages.filter((img) => img.category === selectedCategory)
@@ -94,6 +102,7 @@ export function GalleryGrid() {
             <div
               key={image.id}
               className="group relative overflow-hidden rounded-lg aspect-video bg-muted cursor-pointer"
+              onClick={() => setSelectedImage(image)}
             >
               <Image
                 src={image.src || "/placeholder.svg"}
@@ -110,6 +119,28 @@ export function GalleryGrid() {
             </div>
           ))}
         </div>
+
+        {/* Image Preview Dialog */}
+        <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+          <DialogContent className="max-w-6xl max-h-[80vh] flex flex-col p-6 my-8">
+            {selectedImage && (
+              <div className="relative w-full h-[55vh]">
+                <Image
+                  src={selectedImage.src || "/placeholder.svg"}
+                  alt={selectedImage.alt}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            )}
+            {selectedImage && (
+              <div className="p-4 border-t">
+                <h2 className="font-bold text-xl">{selectedImage.alt}</h2>
+                <p className="text-sm text-muted-foreground">{selectedImage.category}</p>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   )

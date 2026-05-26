@@ -113,9 +113,15 @@ export function AboutVision() {
               To be a premier educational institution that nurtures intellectual
               curiosity, moral values, and leadership qualities.
             </p>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground mb-6">
               We envision a learning environment that prepares students for the
-              challenges of tomorrow.
+              challenges of tomorrow, fostering innovation and excellence.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6">
+              Our vision extends beyond academics to cultivate responsible global citizens who contribute positively to society and embrace lifelong learning.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              We strive to create an inclusive community where every student can discover their potential and achieve their aspirations.
             </p>
           </div>
 
@@ -137,19 +143,31 @@ export function AboutVision() {
             <ul className="space-y-4 text-muted-foreground">
               <li className="flex gap-3">
                 <span className="text-accent font-bold">✓</span>
-                <span>Provide quality education rooted in excellence</span>
+                <span>Provide quality education rooted in excellence and academic rigor</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">✓</span>
-                <span>Develop strong moral values and discipline</span>
+                <span>Develop strong moral values, character, and discipline in students</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">✓</span>
-                <span>Encourage critical thinking and creativity</span>
+                <span>Encourage critical thinking, creativity, and innovation</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">✓</span>
-                <span>Support holistic student development</span>
+                <span>Support holistic student development across academic and co-curricular areas</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent font-bold">✓</span>
+                <span>Promote digital literacy and adapt to modern educational practices</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent font-bold">✓</span>
+                <span>Foster inclusivity and respect for diversity among all students</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent font-bold">✓</span>
+                <span>Build a supportive community where every student can thrive</span>
               </li>
             </ul>
           </div>

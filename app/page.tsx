@@ -7,6 +7,7 @@ import AcademicCalendar from "@/components/calendar"
 import HomeAbout from "@/components/home-about"
 import { AboutVision } from "@/components/about-vision"
 import Offers from "@/components/offers"
+import { FAQ } from "@/components/faq"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Offers />
       
       <AcademicCalendar />
+      <FAQ />
       <HomeCTA />
       <Footer />
     </>

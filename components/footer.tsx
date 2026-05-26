@@ -93,34 +93,35 @@ export function Footer() {
           </div>
         </div>
 
-<div className="border-t border-primary-foreground/20 pt-6">
-  <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/70">
-    {/* Left */}
-    <p className="text-center md:text-left">
+        {/* Bottom Footer Bar */}
+        <div className="border-t border-primary-foreground/20 pt-6">
+  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-primary-foreground/70">
+    {/* Left - Copyright */}
+    <p className="md:flex-1 md:text-left text-center">
       © {currentYear} St. Augusta Public School. All rights reserved.
-      <span className="mx-2 hidden sm:inline">•</span>
-      <span className="block sm:inline">
-        Made with <span className="text-red-400">❤️</span> by Aviral Singh
-      </span>
     </p>
-
-    {/* Right – Instagram */}
-    <a
-      href="https://www.instagram.com/st_augusta_public_school/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hover:text-primary-foreground transition"
-      aria-label="Instagram"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-8 h-8 hover:scale-110 transition-transform"
-        fill="currentColor"
-        viewBox="0 0 24 24"
+    
+    {/* Center - Terms & Privacy */}
+    <div className="md:flex-1 flex items-center justify-center gap-4">
+      <a 
+        href="/terms-and-conditions" 
+        className="hover:text-primary-foreground transition-colors duration-200"
       >
-        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-.75a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" />
-      </svg>
-    </a>
+        Terms & Conditions
+      </a>
+      <span className="text-primary-foreground/40">•</span>
+      <a 
+        href="/privacy-policy" 
+        className="hover:text-primary-foreground transition-colors duration-200"
+      >
+        Privacy Policy
+      </a>
+    </div>
+    
+    {/* Right - Developer */}
+    <p className="md:flex-1 md:text-right text-center">
+      Developed by Aviral Singh
+    </p>
   </div>
 </div>
 
