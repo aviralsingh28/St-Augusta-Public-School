@@ -5,22 +5,22 @@ import Image from "next/image"
 
 const slides = [
   {
-    image: "/ChatGPT Image Jan 12, 2026, 12_59_34 PM.png",
+    image: "/hero-banner.png",
     text: "St. Augusta Public School",
     subtext: "Excellence in Education",
   },
   {
-    image: "/ChatGPT Image Jan 12, 2026, 12_59_34 PM.png",
+    image: "/hero-banner.png",
     text: "Building Future Leaders",
     subtext: "Quality Education",
   },
   {
-    image: "/ChatGPT Image Jan 12, 2026, 12_59_34 PM.png",
+    image: "/hero-banner.png",
     text: "Education with Values",
     subtext: "Discipline & Growth",
   },
   {
-    image: "/ChatGPT Image Jan 12, 2026, 12_59_34 PM.png",
+    image: "/hero-banner.png",
     text: "Where Learning Meets Excellence",
     subtext: "Holistic Development",
   },
