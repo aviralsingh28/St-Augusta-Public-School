@@ -18,7 +18,7 @@ echo "🔄 Restarting application..."
 if pm2 list | grep -q "st-augusta"; then
     pm2 restart st-augusta
 else
-    pm2 start npm --name "st-augusta" -- start
+    pm2 start npm --name "st-augusta-school" -- start
 fi
 
 pm2 save
