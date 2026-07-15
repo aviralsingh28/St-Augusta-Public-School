@@ -2,6 +2,8 @@
 
 echo "🚀 Starting Deployment"
 
+cd /home/ubuntu/St-Augusta-Public-School || exit
+
 echo "📥 Pulling latest code..."
 git pull origin main
 
@@ -13,5 +15,7 @@ npm run build
 
 echo "♻ Restarting PM2..."
 pm2 restart St-Augusta-Public-School
+
+pm2 save
 
 echo "✅ Deployment Complete"
