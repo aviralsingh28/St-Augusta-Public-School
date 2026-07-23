@@ -6,7 +6,7 @@ export default function AnnouncementMarquee() {
       
       {/* Fixed Left Label (hidden on mobile) */}
       <div className="marquee-label">
-        Special Aviral singh 
+        Special Attention
       </div>
 
       {/* Marquee Area */}
